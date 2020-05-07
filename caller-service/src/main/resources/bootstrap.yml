@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: caller-service
+  cloud:
+    consul:
+      host: localhost
+      config:
+        format: yaml
+      discovery:
+        register-health-check: false
+        instance-id: "${spring.application.name}:${random.value}"
